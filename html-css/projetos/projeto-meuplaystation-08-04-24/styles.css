@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.toptopicos {
+    margin: -8px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    background-color: #06408A;
+    box-shadow: 2px black;
+}
+
+.toptopicos > img {
+    margin-right: 200px;
+    width: 3vw;
+    height: 6vh;
+}
+
+.toptopicos > input {
+    display: flex;
+    height: 3vh;
+    width: 15vw; 
+    border-color: rgb(231, 231, 231);
+    border-radius: 3px;
+    border-style: solid;
+}
+
+.toptopicos > p {
+    margin-left: -195px;
+    margin-right: 160px;
+    color: white;
+    font-size: 1.5vw;
+}
+
+.toptopicos > button {
+    text-decoration: none;
+    background-color: white;
+    margin-left: -40px;
+    border-radius: none;
+    border-style: none;
+}
+
+#topo {
+    padding: 40px;
+    text-decoration: none;
+    display: flex;
+    list-style: none;
+    list-style-type: none;
+}
+
+#topo a {
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.subtopicos {
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    margin-top: -16px;
+    margin-bottom: -1px; 
+    margin-left: -8px;
+    margin-right: -8px;
+    background-color: #0F274A;
+}
+
+#topicos {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    list-style: none;
+    color: white;
+}
+
+#topicos a {
+    margin: 25px;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#conteudo {
+    background-color: rgb(100, 100, 100);
+    padding-left: 270px;
+    padding-right: 200px
+}
+
+#promo img {
+    border-radius: 10px;
+    width: 900px;
+    height: 500px;
+}
+
+.center {
+    background-color: beige;
+    width: 72%;
+    margin-top: 4vh;
+    margin-left: 15vw;
+    margin-right: vw;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: center;
+}
+
+#promocoesverde {
+    color: white;
+    background-color: #0cb929;
+    border-radius: 2px;
+    font-size: 21px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.678);
+    display: flex;
+    margin-right: 310px;
+    padding-left: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-top: -320px;
+    margin-bottom: 340px;
+    margin-left: 920px;    
+}
+
+#promoinfo {
+    display: flex;
+    margin-top: -320px;
+    margin-bottom: 210px;
+    margin-left: 920px;
+    width: 25%;
+}
+
+#tracoemalta {
+    height: 0.2vh;
+    width: 20vw;
+    margin-bottom: 10px;
+    margin-top: -35px;
+    background-color: #06408A;
+}
+
+#emalta img {
+    background-color: rgb(196, 140, 35);
+    margin-left: 360px;
+    padding-top: -100px;
+    margin-bottom: 35px;
+}
+
+h3 {
+    background-color: rgb(78, 29, 156);
+    width: 20vw;
+}
