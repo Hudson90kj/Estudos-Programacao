@@ -1,60 +1,137 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartório Pirapó</title>
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <div class="container-topo">
-        <header class="cabecalho">
-            <div class="header-top-bar">  
+    <header>
+        <!-- Linha superior com dados da empresa -->
+        <div class="top-line">  
+            <div class="container">
                 <div class="email">
-                  <img id="img-top2" src="assets/imagens/icone-email.png" alt="email">
-                    <span>cartoriopirapo@gmail.com</span>
-            </div>
-            <div class="telefone">
-                <img id="img-top1" src="assets/imagens/icone-telefone.png" alt="telefone">
-                    <span>(43) 3440-1092</span>
-            </div>
-            <div class="whatsapp">
-                <img id="img-top2" src="assets/imagens/icone-whatsapp.png" alt="whatsapp">
-                    <span>43 98435-4708</span>
-            </div>
-    </div>
-        <div class="container-info">
-            <nav class="nav-info">
-                    <a href="#home" class="logo"><img src="assets/imagens/logo-cartorio.png" class="logo-img" alt="logo do cartório">Cartório<br> do Pirapó</a>
-                        <ul class="nav-menu1">
-                            <img src="assets/imagens/icone-localizacao-branco.png" alt="icone de localização na cor branca"><li class="nav-item"><a href="#endereco">Rua Erwin Schindler, 340 <br> Pirapó, Apucarana-PR.</a></li>
-                            <img src="assets/imagens/icone-relogio.png" alt="icone relogio na cor branca"><li class="nav-item"><a href="#horario">Seg a Sex: 8h às 17h <br> Sab: Somente casamentos</a></li>
-                            <a href="#contato" class="info-contact">Entre em contato</a>
-                        </ul>
-
-            </nav>
+                    <img class="img-top-line" src="assets/imagens/icone-email.png" alt="email">
+                    <a href="#email(alterar)">cartoriopirapo@gmail.com</a>
+                </div> 
+                <div class="telefone">
+                    <img class="img-top-line" src="assets/imagens/icone-telefone.png" alt="telefone">
+                    <a href="#telefone(alterar)">(43) 3440-1092</a>
+                </div>
+                <div class="whatsapp">
+                    <img class="img-top-line" src="assets/imagens/icone-whatsapp.png" alt="whatsapp">
+                    <a href="#whatsapp (alterar)">43 98435-4708</a>
+                </div>
         </div>
-        <nav class="navigation">
-            <ul class="nav-menu2">
-                <li class="nav-item"><a href="#sobre">Sobre Nós</a></li>
-                <li class="nav-item"><a href="#registro-civil">Registro Civil</a></li>
-                <li class="nav-item"><a href="#tabelionato-de-notas">Tabelionado de Notas</a></li>
-                <li class="nav-item"><a href="#tabelionato-de-notas">Tabelionado de Notas</a></li>
-                <li class="nav-item"><a href="#emolumentos">Emolumentos</a></li>
-                <li class="nav-item"><a href="#contato">Entre em Contato</a></li>
-                <i class="bx bx-search"></i>
-            </ul>
-
+    </div>
+    <!-- Espaço com logo e blocos -->
+        <div class="header-content">
+            <nav class="container">
+                <div class="nav-info">
+                    <div class="logo">
+                        <a href="#home" id="logo-img-a"><img src="assets/imagens/logo-cartorio.png" class="logo-img" alt="logo do cartório"></a>
+                    </div>
+                    <div class="blocks">
+                        <div class="block1">
+                        <img id="img-block1" src="assets/imagens/icone-localizacao-branco.png" alt="icone de localização na cor branca">
+                            <a href="#endereco">Rua Erwin Schindler, 340 <br> Pirapó, Apucarana-PR.</a>
+                        </div>
+                        <div class="block2">
+                        <img id="img-block2" src="assets/imagens/icone-relogio.png" alt="icone relogio na cor branca">
+                            <a href="#horario">Seg a Sex: 8h às 17h <br> Sab: Somente casamentos</a>
+                        </div>
+                            <a href="#contato" id="info-block3">Entre em contato</a>
+                    </div>
+                </div> 
+            </nav>
+            <!-- barra roxa embaixo do header -->
+            <div class="side-bar-header">‎ 
+            </div>   
+        </div>
+        <!-- Menu -->
+        <nav class="menu">
+            <div class="container">
+                <ul class="header-sidebar">
+                    <li class="nav-item"><a href="#sobre">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="#registro-civil">Registro Civil</a></li>
+                    <li class="nav-item"><a href="#tabelionato-de-notas">Tabelionado de Notas</a></li>
+                    <li class="nav-item"><a href="#Emolumentos">Emolumentos</a></li>
+                    <li class="nav-item"><a href="#criticas">Sugestões</a></li>
+                    <i class="bx bx-search"></i>
+                </ul>
+            </div>
+            <div id="sidebar">
+            </div>
         </nav>
     </header>
-
-    <main>
-
-    </main>
-
-    <img id="img-top" src="assets/imagens/icone-localizacao.png" alt="localização">
-    <span>Rua Erwin Schindler, 340 - Pirapó, Apucarana-PR. 86818-000</span>
-
+<main>
+    <!-- Imagem e texto embaixo do Header -->
+        <section class="img-background-top">
+            <img id="img-bck-top" src="assets/imagens/cartorio-20.jpg" alt="imagem do cartório com pontinhos brancos ao redor">
+        </section>
+        <div class="container">
+            <aside class="text-top-cartorio">
+                <div class="title-top">
+                    <h1>
+                        Bem vindo ao
+                    </h1>
+                    <h1>
+                        Cartório do Pirapó
+                    </h1>
+                </div>
+                <div class="description">
+                    <p>
+                        O Serviço Distrital de Pirapó, presta serviços essenciais à população, desde 1954. <br> Atuando nas área de Registro Civil de Pessoas Naturais e Tabelionato de Notas.
+                    </p>
+                </div>
+                <div class="wrapper-home">
+                    <a class="wrapper-inicio1" href="#saibamais">Saiba Mais</a>
+                    <a class="wrapper-inicio2" href="#contato">Entre em Contato</a>
+                    <a class="wrapper-inicio2" href="(qualquer link)">Edital Nº1/2023</a>
+                </div>
+            </aside>
+        </div>
+        <div class="wrapper-space">
+            <img id="img-bck-top" src="assets/imagens/cartorio-20.jpg" alt="imagem do cartório com pontinhos brancos ao redor">
+        </div>
+        <div class="container">
+            <section class="sobre-nos">
+                <div class="section-sobre">
+                    <img src="assets/imagens/mao-batendo-carimbo-sobre.png" alt="imagem de uma mão batendo um carimbo numa folha">
+                        <div class="text-sobre">
+                            <p class="p1">Saiba mais</p>
+                            <h1 class="tittle1">Sobre Nós
+                            </h1>
+                            <p class="description1">Aqui no Cartório do Pirapó, transformamos o poder da palavra escrita em uma ferramenta de segurança jurídica, permitindo que as pessoas possam avançar em seus projetos de vida com confiança e tranquilidade..
+                            </p>
+                            <a id="button-saiba" href="#saibamais">Saiba Mais</a>
+                        </div>
+                </div>
+                <div class="spacing-section"></div>
+                <div class="container">
+                    <section class="section-servicos">
+                        <p class="p2">O que fazemos</p>
+                        <h1 class="tittle2">Nossos Serviços</h1>
+                            <div class="wrappers">
+                                <div class="tabelionato-de-notas">
+                                    <img class="img-tabelionato" src="assets/imagens/tabelionato-de-notas.png" alt="foto com duas mulheres, onde uma está segurando uma caneta e sorrindo">
+                                        <div class="box-tab">
+                                            <h2 class="h2-tabelionato"><img src="assets/imagens/caderno.png" alt="imagem de um caderno laranjado">Tabelionato de Notas</h2>
+                                            <a class="a-tabelionato" href="#tabelionato(trocar)">Saiba Mais ➔</a>
+                                        </div>
+                            </div>
+                                <div class="registro-civil">
+                                    <img class="img-civil" src="assets/imagens/registro-civil.png" alt="foto com um homem e uma mulher assinando um livro de casamento em cartório">
+                                        <div class="box-civil">
+                                            <h2 class="h2-civil"><img src="assets/imagens/aliancas.png" alt="imagem de uma aliança laranjada">Registro Civil</h2>
+                                            <a class="a-civil" href="#civil(trocar)">Saiba Mais ➔</a>
+                                        </div>
+                                </div>
+                            </div>
+                    </section>
+                </div>
+        <div class="spacing-section2"></div>
+</main>
 </body>
 </html>

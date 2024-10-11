@@ -1,179 +1,464 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
-@font-face {
-    font-family: 'GT Walsheim Pro';
-    src: local('GT Walsheim Pro Regular'), local('fontes/GTWalsheimPro-Regular.ttf'),
-        url('fontes/GTWalsheimPro-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen:wght@400..800&display=swap');
 
-@font-face {
-    font-family: 'GT Walsheim Pro';
-    src: local('GT Walsheim Pro Medium'), local('GT-Walsheim-Pro-Medium'),
-        url('GTWalsheimPro-Medium.woff2') format('woff2'),
-        url('GTWalsheimPro-Medium.woff') format('woff'),
-        url('GTWalsheimPro-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-  }
+/* 
+font-family: "Poppins", sans-serif;
+font-family: "Sen", sans-serif;
+font-family: "Arimo", sans-serif;
+font-family: "Roboto Flex", sans-serif;
+font-family: "Roboto Mono", monospace;
+font-family: "Roboto Condensed", sans-serif;
+font-family: "Roboto", sans-serif;
+font-family: "Kanit", sans-serif;
+*/
 
-@font-face {
-    font-family: 'GT Walsheim Pro';
-    src: local('GT Walsheim Pro Bold'), local('GT-Walsheim-Pro-Bold'),
-        url('GTWalsheimPro-Bold.woff2') format('woff2'),
-        url('GTWalsheimPro-Bold.woff') format('woff'),
-        url('GTWalsheimPro-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-  }
+/* Reset básico */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
     list-style: none;
     text-decoration: none;
 }
 
 a {
-    color: var(--text-light);
+    color: var(--branco-1);
 }
 
 :root {
-    --bg-color: #FFFFFF;
-    --bg-primary: #181E4D;
-    --bg-secondary: #101439;
-    --primary-color: #F25C05;
-    --text-light: #bebebe;
-    --text-black: #000;
-    --title-primary-color: #F5F5F7;
-    --subtitle-color: #6E6E73;
-    --action-color: #07B650;
-    --shadow-header: #1A5676;
-}
-
-.container-topo {
-    width: 100%;
-    background: var(--bg-secondary);
-    height: 4vh;
-    border-bottom: 1px solid var(--shadow-header);
-}
-
-.cabecalho {
-    width: 75%;
-    height: 15vw;
-    margin: 0 auto;
-}
-
-body { 
-    background-color: #6E6E73;
-    max-width: 100%;
-}
-
-header {
+    --preto: #000;
+    --preto-claro: #110303;
+    --roxo-claro: #181E4D;
+    --roxo-escuro: #101439;
+    --azul-2: #1A5676;
+    --laranja: #F25C05;
+    --laranja-claro: #ff7b00;
+    --cinza-claro: #bebebe;
+    --cinza-escuro: #6E6E73;
+    --branco-1: #F5F5F7;
+    --branco: #ffffff;
+    --verde-neon: #07B650;
     
 }
 
-.header-top-bar {
-    font-family: "Arimo", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    display: flex;
-    align-items: center;
-    gap: 5rem;
-    color: var(--title-primary-color);
-    background-color: var(--bg-secondary);
-    height: 4vh;
-    border-bottom: 1px solid var(--shadow-header);
+body {
+    background-color: var(--branco);
+    font-family: "Sen", sans-serif;
 }
 
-.email {
-    display: flex;
-    align-items: center;
+h1 {
+    font-family: "Poppins", sans-serif;
 }
 
-.telefone {
-    display: flex;
-    align-items: center;
+/* Container centralizado */
+.container {
+    max-width: 1300px; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
+    margin: 0 auto;
 }
 
-.whatsapp {
-    display: flex;
-    align-items: center;
+/* Linha superior com dados da empresa */
+.top-line {
+    height: 38px;
+    background-color: var(--roxo-escuro);
+    border-bottom: 1px solid var(--azul-2);
+    
 }
 
-#img-top {
+.top-line .container {
+    height: 100%;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    font-size: 15px;
+}
+
+.top-line .container .img-top-line {
     width: 20px;
-    margin: 0rem 0.5rem 0rem 0rem;
+    margin: 0px 0.3px -5px 0px;
 }
 
-#img-top1 {
-    width: 20px;
-    margin: 0rem 0.5rem 0rem 0rem;
-}
+/* Espaço com logo e blocos */
 
-#img-top2 {
-    width: 18px;
-    margin: 0rem 0.5rem 0rem 0rem;
-}
-
-.container-info {
-    width: 100%;
-    background-color: var(--action-color);
-    height: 18vh;
-    border-bottom: 1px solid var(--text-black);
+.header-content {
+    height: 130px;
+    background-color: var(--roxo-claro);
 }
 
 .nav-info {
+    height: 120px;
     display: flex;
     justify-content: space-between;
-    padding:4vh 0vw;
-    box-shadow: 0 0.1 0rem 0.5rem #cccccc;
-    color: var(--text-light);
-    background: var(--bg-primary);
+    align-items: center;
 }
 
-.logo {
-    color: var(--text-light);
+#logo-img-a {
     display: flex;
     align-items: center;
-    justify-content: left;
-    gap: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'GT Walsheim Pro';
 }
 
 .logo-img {
+    width: 200px;
+    height: auto;
 }
 
-.nav-info > a > img {
-    width: 6rem;
+.blocks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 110px;
+    
 }
 
-.nav-menu1 {
+.block1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.block2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#img-block1 {
+    display: flex;
+    height: 18px;
+    width: 18px;
+}
+
+#img-block2 {
+    display: flex;
+    height: 18px;
+    width: 18px;
+}
+
+#info-block3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 200px;
+    background-color: var(--laranja);
+    font-weight: 700;
+    
+}
+
+.side-bar-header {
+    width: 100%;
+    height: 60px;
+    background-color: var(--roxo-claro);
+}
+
+.menu {
+
+}
+
+.header-sidebar {
+    background-color: var(--branco-1);
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#sidebar {
+    margin-top: -20px;
+}
+
+.nav-item > a {
+    margin-left: 30px;
+    font-weight: 800;
+    color: var(--roxo-escuro);
+}
+
+.img-background-top {
+    opacity: 100%;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    width: auto;
+}
+
+#img-bck-top {
+    display: flex;
+    opacity: 100%;
+    width: 100%;
+    min-height: 630px;
+    max-height: 680px;
+}
+
+.text-top-cartorio {
+    color: var(--branco-1);
+    width: auto;
+    height: auto;
+    margin-top: 150px;
+    position: absolute;
+    z-index: 2; 
+}
+
+.title-top {
+    font-size: 29px;
+    margin-bottom: 50px;
+}
+
+.title-top h1 {
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.wrapper-home {
+    display: flex;
+    gap: 30px;
+}
+
+.wrapper-inicio1 {
+    font-size: 18px;
+    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    width: 180px;
+    height: 50px;
+    background-color: var(--laranja);
+    border: 1.5px solid var(--laranja-claro);
 }
 
-.nav-menu1 > img {
-    margin-left: 5vw;
-    width: 20px;
-}
-
-.info-contact {
+.wrapper-inicio2 {
+    font-size: 17px;
     font-weight: bold;
-    color: var(--title-primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
-    height: 5vh;
-    width: 15rem;
-    margin-left: 4vw;
+    width: 200px;
+    height: 50px;
+    border: 2px solid #bebebe42;
+}
+
+.wrapper-space {
+    display: flex;
+    width: 100%;
+    min-height: 630px;
+    max-height: 680px;
+    opacity: 100%;
+    background-color: #07B650;
+}
+
+.sobre-nos {
+    width: 100%;
+    height: 1000px;
+    background-color: var(--branco);
+    
+}
+
+.section-sobre {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sobre-nos .section-sobre img {
+    width: 100%;
+    max-width: 570px;
+    height: auto;
+}
+
+.text-sobre {
+    width: 500px;
+    height: auto;
+}
+
+.p1 {
+    font-size: 13px;
+    color: var(--cinza-escuro);
+    margin-bottom: 10px;
+}
+
+.tittle1 { 
+    font-size: 45px;
+    margin-bottom: 40px;
+    color: var(--roxo-claro);
+}
+
+.description1 {
+    width: 400px;
+    color: var(--cinza-escuro);
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+#button-saiba {
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--laranja);
+    width: 120px;
+    height: 30px;
+    font-size: 15px;
+    margin-top: 35px;
+}
+
+.spacing-section {
+    background-color: var(--branco);
+    width: 100%;
+    height: 130px;
+}
+
+.section-servicos {
+
+}
+
+.p2 {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: var(--cinza-escuro);
+    margin-bottom: 10px;
+}
+
+.tittle2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    margin-bottom: 40px;
+    color: var(--roxo-claro);
+}
+
+.wrappers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 46px;
+}
+
+.tabelionato-de-notas {
+
+}
+
+.img-tabelionato {
+    z-index: 3;
+    height: auto;
+    max-width: 550px;
+    margin-bottom: -50px;
+}
+
+.box-tab {
+    width: 100%;
+}
+
+.h2-tabelionato {
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 1px 1dvh 50px #5f5f5f33;
+    margin-left: 26px;
+    position: relative;
+    z-index: 2;
+    padding-left: 20px;
+    gap: 20px;
+    align-items: center;
+    background-color: #f7f7f7;
+    display: flex;
+    width: 90%;
+    height: 100px;
+}
+
+.box-tabelionato img {
+
+}
+
+.a-tabelionato {
+    margin-left: 26px;
+    width: 90%;
+    height: 50px;
+    color: var(--cinza-escuro);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/////////////////
+
+
+.registro-civil {
+
+}
+
+.img-civil {
+    z-index: 3;
+    height: auto;
+    width: 550px;
+    margin-bottom: -50px;
+}
+
+
+.box-civil {
+    width: 100%;
+}
+
+.h2-civil {
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 1px 1dvh 50px #5f5f5f33;
+    margin-left: 26px;
+    position: relative;
+    z-index: 2;
+    padding-left: 20px;
+    gap: 20px;
+    align-items: center;
+    background-color: #f7f7f7;
+    display: flex;
+    width: 90%;
+    height: 100px;
+}
+
+.a-civil {
+    margin-left: 26px;
+    width: 90%;
+    height: 50px;
+    color: var(--cinza-escuro);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.spacing-section2 {
+    width: 100%;
+    height: 500px;
 }
