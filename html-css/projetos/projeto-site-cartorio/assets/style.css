@@ -33,6 +33,8 @@ a {
     --azul-2: #1A5676;
     --laranja: #F25C05;
     --laranja-claro: #ff7b00;
+    --cinza-mais-clarinho: #F6F6F6;
+    --cinza-clarinho: #d1d1d1;
     --cinza-claro: #bebebe;
     --cinza-escuro: #6E6E73;
     --branco-1: #F5F5F7;
@@ -73,8 +75,7 @@ h1 {
 }
 
 .top-line .container .img-top-line {
-    width: 20px;
-    margin: 0px 0.3px -5px 0px;
+    margin: 0px 0.3px -6px 0px;
 }
 
 /* Espaço com logo e blocos */
@@ -105,32 +106,24 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 110px;
+    gap: 100px;
     
 }
 
 .block1 {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
 }
 
 .block2 {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 18px;
 }
 
-#img-block1 {
-    display: flex;
-    height: 18px;
-    width: 18px;
-}
-
-#img-block2 {
-    display: flex;
-    height: 18px;
-    width: 18px;
+.tittle-cinza{
+    color: var(--cinza-clarinho);
 }
 
 #info-block3 {
@@ -279,7 +272,8 @@ h1 {
 }
 
 .p1 {
-    font-size: 13px;
+    font-weight: bold;
+    font-size: 14px;
     color: var(--cinza-escuro);
     margin-bottom: 10px;
 }
@@ -323,9 +317,10 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--cinza-escuro);
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .tittle2 {
@@ -390,10 +385,6 @@ h1 {
     align-items: center;
 }
 
-
-/////////////////
-
-
 .registro-civil {
 
 }
@@ -437,28 +428,309 @@ h1 {
     align-items: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .spacing-section2 {
     width: 100%;
-    height: 500px;
+    height: 550px;
+}
+
+.background-section-localidade {
+    width: 100%;
+    height: 1000px;
+    background-color: var(--cinza-mais-clarinho);
+}
+
+.section-local-e-fale {
+    display: flex;
+    justify-content: space-around;   
+}
+
+.section-localidade {
+    display: flex;
+}
+
+.localidade {    
+    display: flex;
+    flex-direction: column;
+}
+
+.p3 {
+    padding-top: 80px;
+    font-size: 14px;
+    color: var(--cinza-escuro);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.tittle3 {
+    font-size: 45px;
+    font-weight: 800;
+    color: var(--roxo-claro);
+    margin-bottom: 10px;
+}
+
+.description3 {
+    width: 500px;
+    margin-bottom: 40px;
+}
+
+.bar-section-localidade {
+    margin-top: 80px;
+    flex-direction: row;
+    background-color: #bebebe7e;
+    width: 1px;
+    height: 700px;
+    margin-left: 100px;
+}
+
+.section-duvidas {
+    
+}
+
+.duvidas {
+
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.contact-box img {
+    
+}
+
+.contact-box a {
+    color: var(--preto);
+}
+
+.bxs-envelope1 {
+    width: 50px;
+    display: flex;
+    gap: 10px;
+    font-style: normal;
+}
+
+.bxs-envelope2 {
+    display: flex;
+    gap: 10px;
+    font-style: normal;
+}
+
+.bxs-envelope3 {
+    display: flex;
+    gap: 10px;
+    font-style: normal;
+}
+
+.icone-whatsapp {
+    width: 24px;
+    height: 24px;
+}
+
+.box-contact-email {
+    width: auto;
+    height: 460px;
+}
+
+.input-desc {
+    display: flex;
+    padding-left: 50px;
+    padding-top: 3px;
+}
+
+.img-input {
+    display: flex;
+    padding-left: 17px;
+    margin-top: -42px;
+}
+
+.img-input-msg {
+    display: flex;
+    padding-left: 17px;
+    margin-top: -214px;
+}
+
+.input-desc::placeholder {
+    display: flex;
+    font-size: 16px;
+}
+
+.input-mensagem::placeholder {
+    width: 440px;
+    height: 210px;
+    display: flex;
+    font-size: 17px;
+}
+
+.email-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.email-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.box-contact-email .email-top p input {
+    width: 230px;
+    height: 60px;
+    
+}
+
+.box-contact-email .email-bottom p input {
+    width: 230px;
+    height: 60px;
+}
+
+.p-contact-mensagem {
+   
+}
+
+.input-mensagem {
+    padding-bottom: 170px;
+    padding-left: 50px;
+    width: 500px;
+    height: 230px;
+}
+
+.form-button-enviar {
+    width: 100px;
+}
+
+.form-button-input {
+    cursor: pointer;
+    border: none;
+    color: var(--branco);
+    background-color: var(--laranja);
+    width: 120px;
+    height: 50px;
+}
+
+
+
+.spacing-footer {
+    width: 100%;
+    height: 150px;
+}
+
+.background-footer {
+    background-color: var(--roxo-claro);
+    width: 100%;
+    height: 600px;
+    padding-top: 90px;
+}
+
+.box-footer {
+    color: var(--cinza-claro);
+    display: flex;
+}
+
+.info-cartorio-footer {
+
+}
+
+.info-cartorio-footer img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.info-cartorio-footer p {
+    line-height: 25px;
+    letter-spacing: 0.5px;
+    width: 300px;
+    height: 300px;
+    color: var(--cinza-claro);
+}
+
+.bar-section-footer {
+    margin-top:  15px;
+    background-color: var(--laranja);
+    width: 1px;
+    height: 350px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.section-right-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-right-footer a {
+    color: var(--cinza-claro);
+}
+
+.footer-title {
+    font-size: 17px;
+    color: var(--branco);
+}
+
+#horario-footer {
+    color: var(--laranja);
+}
+
+.section-right-footer p {
+    margin: 20px 0px 20px 0px;
+    background-color: var(--laranja);
+    width: 40px;
+    height: 1px;
+}
+
+.section-right-footer2 p {
+    margin: 20px 0px 20px 0px;
+    background-color: var(--laranja);
+    width: 40px;
+    height: 1px;
+}
+
+.section-right-footer3 p {
+    margin: 20px 0px 20px 0px;
+    background-color: var(--laranja);
+    width: 40px;
+    height: 1px;
+}
+
+.section-right-footer a {
+    margin-bottom: 30px;
+}
+
+.section-right-footer2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+}
+
+.section-right-footer2 a {
+    color: var(--cinza-claro);
+    margin-bottom: 30px;
+}
+
+.section-right-footer3 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+}
+
+.final-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.final-footer p {
+    color: var(--branco);
+}
+
+.final-footer a {
+    color: var(--laranja);
+    font-weight: 500;
 }
