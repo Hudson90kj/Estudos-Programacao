@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen:wght@400..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* 
 font-family: "Poppins", sans-serif;
@@ -9,6 +9,8 @@ font-family: "Roboto Mono", monospace;
 font-family: "Roboto Condensed", sans-serif;
 font-family: "Roboto", sans-serif;
 font-family: "Kanit", sans-serif;
+font-family: "Roboto Slab", serif;
+font-family: "Source Sans 3", sans-serif;
 */
 
 /* Reset básico */
@@ -35,7 +37,9 @@ a {
     --laranja-claro: #ff7b00;
     --cinza-mais-clarinho: #F6F6F6;
     --cinza-clarinho: #d1d1d1;
+    --cinza-subtitulo: #979797;
     --cinza-claro: #bebebe;
+    --cinza-clarinho-borda: #bebebe42;
     --cinza-escuro: #6E6E73;
     --branco-1: #F5F5F7;
     --branco: #ffffff;
@@ -45,7 +49,7 @@ a {
 
 body {
     background-color: var(--branco);
-    font-family: "Sen", sans-serif;
+    font-family: "Source Sans 3", sans-serif;
 }
 
 h1 {
@@ -56,6 +60,7 @@ h1 {
 .container {
     max-width: 1300px; /* Ajustar conforme necessário (vai enquadrar o site todo no meio) */
     margin: 0 auto;
+    transition: 0.2s;
 }
 
 /* Linha superior com dados da empresa */
@@ -69,13 +74,23 @@ h1 {
 .top-line .container {
     height: 100%;
     display: flex;
-    gap: 50px;
+    gap: 60px;
     align-items: center;
     font-size: 15px;
 }
 
 .top-line .container .img-top-line {
     margin: 0px 0.3px -6px 0px;
+}
+
+.top-line .container a {
+    transition: color 0.3s;
+    color: var(--branco);
+}
+
+.top-line .container a:hover {
+    transition: color 0.3s;
+    color: var(--laranja);
 }
 
 /* Espaço com logo e blocos */
@@ -98,7 +113,7 @@ h1 {
 }
 
 .logo-img {
-    width: 200px;
+    width: 230px;
     height: auto;
 }
 
@@ -107,7 +122,7 @@ h1 {
     align-items: center;
     justify-content: space-between;
     gap: 100px;
-    
+    transition: 0.3s;
 }
 
 .block1 {
@@ -116,14 +131,15 @@ h1 {
     gap: 16px;
 }
 
-.block2 {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+.block1 a {
+    line-height: 25px;
+    color: var(--cinza-clarinho);
+    transition: color 0.3s;
 }
 
-.tittle-cinza{
-    color: var(--cinza-clarinho);
+.block1 a:hover {
+    color: var(--laranja-claro);
+    transition: color 0.3s;
 }
 
 #info-block3 {
@@ -133,8 +149,14 @@ h1 {
     height: 50px;
     width: 200px;
     background-color: var(--laranja);
+    transition: background-color 0.5s;
     font-weight: 700;
-    
+}
+
+#info-block3:hover {
+    transition: 0.5s;
+    background-color: var(--branco);
+    color: var(--roxo-claro);
 }
 
 .side-bar-header {
@@ -154,19 +176,114 @@ h1 {
     width: 100%;
     height: 70px;
     display: flex;
-    justify-content: space-between;
+}
+
+.header-siderbar-left {
+    width: 90%;
+    display: flex;
     align-items: center;
-    position: relative;
+    justify-content: flex-start;
+    margin-left: 10px;
+    gap: 20px;
+}
+
+/* CSS DO MENU HAMBURGUER ( 4 BOLINHAS ) */
+
+.header-sidebar-right {
+    display: flex;
+    width: 10%;
+    padding-right: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-right {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: right;
+    background-color: #07B650;
+}
+
+.menu-bolinhas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.a-menu span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--roxo-escuro);
 }
 
 #sidebar {
     margin-top: -20px;
 }
 
+/*   CSS DO MENU QUE DESCE PASSANDO O MOUSE
+
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.lista1 {
+  display: inline-block;
+}
+
+.lista1:hover {
+  background: #333;
+}
+
+.lista1:hover .lista2 {
+  display: block;
+}
+
+.lista2 {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+
+.lista-link {
+  background: #555;
+  display: block;
+}
+
+.link {
+  display:block !important;
+}
+
+.lista-link:hover {
+  background: #666;
+}
+
+*/
+
+.nav-item-spacing {
+    color: var(--cinza-claro);
+    cursor: default;
+    opacity: 50%;
+    margin-right: -20px;
+    padding-left: 10px;
+}
+
 .nav-item > a {
     margin-left: 30px;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--roxo-escuro);
+    transition: 0.3s;
+}
+
+.nav-item a:hover {
+    color: var(--laranja);
+    transition: 0.3s;
+    font-weight: 900;
 }
 
 .img-background-top {
@@ -189,23 +306,23 @@ h1 {
     color: var(--branco-1);
     width: auto;
     height: auto;
-    margin-top: 150px;
+    margin-top: 140px;
     position: absolute;
     z-index: 2; 
 }
 
 .title-top {
-    font-size: 29px;
+    font-size: 30px;
     margin-bottom: 50px;
 }
 
 .title-top h1 {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .description {
-    font-size: 17px;
-    margin-bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 35px;
 }
 
 .wrapper-home {
@@ -219,10 +336,17 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 180px;
+    width: 165px;
     height: 50px;
     background-color: var(--laranja);
     border: 1.5px solid var(--laranja-claro);
+}
+
+.wrapper-inicio1:hover {
+    border: 1px solid var(--preto);
+    background-color: var(--branco);
+    color: var(--preto);
+    transition: 0.5s;
 }
 
 .wrapper-inicio2 {
@@ -231,9 +355,33 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 190px;
     height: 50px;
-    border: 2px solid #bebebe42;
+    border: 2px solid var(--cinza-clarinho-borda);
+}
+
+.wrapper-inicio2:hover {
+    background-color: var(--laranja);
+    border: 1px solid var(--laranja-claro);
+    transition: 0.5s;
+}
+
+
+.wrapper-inicio3 {
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    border: 2px solid var(--cinza-clarinho-borda);
+}
+
+.wrapper-inicio3:hover {
+    background-color: var(--laranja);
+    border: 1px solid var(--laranja-claro);
+    transition: 0.5s;
 }
 
 .wrapper-space {
@@ -263,7 +411,9 @@ h1 {
 .sobre-nos .section-sobre img {
     width: 100%;
     max-width: 570px;
+    min-width: 300px;
     height: auto;
+    transition: 0.5s;
 }
 
 .text-sobre {
@@ -273,13 +423,13 @@ h1 {
 
 .p1 {
     font-weight: bold;
-    font-size: 14px;
-    color: var(--cinza-escuro);
+    font-size: 16px;
+    color: var(--cinza-subtitulo);
     margin-bottom: 10px;
 }
 
 .tittle1 { 
-    font-size: 45px;
+    font-size: 46px;
     margin-bottom: 40px;
     color: var(--roxo-claro);
 }
@@ -292,15 +442,23 @@ h1 {
 }
 
 #button-saiba {
-    border-radius: 3px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--laranja);
     width: 120px;
-    height: 30px;
-    font-size: 15px;
+    height: 40px;
+    font-size: 16px;
     margin-top: 35px;
+    transition: 0.5s;
+}
+
+#button-saiba:hover {
+    transition: 0.5s;
+    background-color: var(--roxo-escuro);
+    color: var(--branco);
+    font-weight: bold;
 }
 
 .spacing-section {
@@ -317,8 +475,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
-    color: var(--cinza-escuro);
+    font-size: 16px;
+    color: var(--cinza-subtitulo);
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -327,7 +485,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 45px;
+    font-size: 46px;
     margin-bottom: 40px;
     color: var(--roxo-claro);
 }
@@ -337,10 +495,11 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 46px;
+    transition: 0.3s;
 }
 
 .tabelionato-de-notas {
-
+    transition: 0.3s;
 }
 
 .img-tabelionato {
@@ -348,10 +507,12 @@ h1 {
     height: auto;
     max-width: 550px;
     margin-bottom: -50px;
+    transition: 0.3s;
 }
 
 .box-tab {
     width: 100%;
+    transition: 0.3s;
 }
 
 .h2-tabelionato {
@@ -368,10 +529,18 @@ h1 {
     display: flex;
     width: 90%;
     height: 100px;
+    transition: 0.3s;
+}
+
+.h2-tabelionato:hover {
+    transition: 0.3s;
+    background-color: var(--roxo-claro);
+    color: var(--branco);
+    transition: 0.3s;
 }
 
 .box-tabelionato img {
-
+    transition: 0.3s;
 }
 
 .a-tabelionato {
@@ -383,10 +552,19 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s;
+}
+
+.a-tabelionato:hover {
+    transition: 0.3s;
+    background-color: var(--roxo-claro);
+    color: var(--branco);
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .registro-civil {
-
+    transition: 0.3s;
 }
 
 .img-civil {
@@ -394,11 +572,13 @@ h1 {
     height: auto;
     width: 550px;
     margin-bottom: -50px;
+    transition: 0.3s;
 }
 
 
 .box-civil {
     width: 100%;
+    transition: 0.3s;
 }
 
 .h2-civil {
@@ -415,6 +595,13 @@ h1 {
     display: flex;
     width: 90%;
     height: 100px;
+    transition: 0.3s;
+}
+
+.h2-civil:hover {
+    transition: 0.3s;
+    background-color: var(--roxo-claro);
+    color: var(--branco);
 }
 
 .a-civil {
@@ -426,6 +613,13 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.a-civil:hover {
+    transition: 0.3s;
+    background-color: var(--roxo-claro);
+    color: var(--branco);
+    font-weight: bold;
 }
 
 .spacing-section2 {
@@ -441,7 +635,8 @@ h1 {
 
 .section-local-e-fale {
     display: flex;
-    justify-content: space-around;   
+    justify-content: space-around; 
+
 }
 
 .section-localidade {
@@ -451,12 +646,13 @@ h1 {
 .localidade {    
     display: flex;
     flex-direction: column;
+
 }
 
 .p3 {
     padding-top: 80px;
-    font-size: 14px;
-    color: var(--cinza-escuro);
+    font-size: 17px;
+    color: var(--cinza-subtitulo);
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -475,10 +671,9 @@ h1 {
 
 .bar-section-localidade {
     margin-top: 80px;
-    flex-direction: row;
     background-color: #bebebe7e;
     width: 1px;
-    height: 700px;
+    height: 725px;
     margin-left: 100px;
 }
 
@@ -497,6 +692,7 @@ h1 {
     font-size: 18px;
     height: auto;
     margin-bottom: 40px;
+    transition: 0.3s;
 }
 
 .contact-box img {
@@ -504,7 +700,8 @@ h1 {
 }
 
 .contact-box a {
-    color: var(--preto);
+    color: var(--roxo-escuro);
+    font-weight: 500;
 }
 
 .bxs-envelope1 {
@@ -512,6 +709,13 @@ h1 {
     display: flex;
     gap: 10px;
     font-style: normal;
+    transition: 0.3s;
+}
+
+.bxs-envelope1 a:hover {
+    transition: 0.3s;
+    color: var(--laranja);
+    font-weight: 700;
 }
 
 .bxs-envelope2 {
@@ -520,10 +724,22 @@ h1 {
     font-style: normal;
 }
 
+.bxs-envelope2 a:hover {
+    transition: 0.3s;
+    color: var(--laranja);
+    font-weight: 700;
+}
+
 .bxs-envelope3 {
     display: flex;
     gap: 10px;
     font-style: normal;
+}
+
+.bxs-envelope3 a:hover {
+    transition: 0.3s;
+    color: var(--laranja);
+    font-weight: 700;
 }
 
 .icone-whatsapp {
@@ -532,20 +748,24 @@ h1 {
 }
 
 .box-contact-email {
-    width: auto;
-    height: 460px;
+    width: 500px;
+    height: 450px;
+    transition: 0.3s;
+    transition: 0.3s;
 }
 
 .input-desc {
     display: flex;
     padding-left: 50px;
     padding-top: 3px;
+    transition: 0.3s;
 }
 
 .img-input {
     display: flex;
     padding-left: 17px;
     margin-top: -42px;
+    transition: 0.3s;
 }
 
 .img-input-msg {
@@ -557,40 +777,47 @@ h1 {
 .input-desc::placeholder {
     display: flex;
     font-size: 16px;
+    transition: 0.3s;
 }
 
 .input-mensagem::placeholder {
-    width: 440px;
+    width: 400px;
     height: 210px;
     display: flex;
     font-size: 17px;
+    transition: 0.3s;
 }
 
 .email-top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    transition: 0.3s;
 }
 
 .email-bottom {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    transition: 0.3s;
 }
 
 .box-contact-email .email-top p input {
     width: 230px;
     height: 60px;
-    
+    transition: 0.3s;
 }
 
 .box-contact-email .email-bottom p input {
     width: 230px;
     height: 60px;
+    transition: 0.3s;
 }
 
 .p-contact-mensagem {
-   
+    width: 500px;
+    height: 230px;
+    transition: 0.3s;
 }
 
 .input-mensagem {
@@ -598,10 +825,7 @@ h1 {
     padding-left: 50px;
     width: 500px;
     height: 230px;
-}
-
-.form-button-enviar {
-    width: 100px;
+    transition: 0.3s;
 }
 
 .form-button-input {
@@ -611,13 +835,22 @@ h1 {
     background-color: var(--laranja);
     width: 120px;
     height: 50px;
+    transition: 0.3s;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-
+.form-button-input:hover {
+    transition: 0.3s;
+    background-color: var(--roxo-escuro);
+    font-weight: 700;
+    transition: 0.3s;
+}
 
 .spacing-footer {
     width: 100%;
     height: 150px;
+    transition: 0.3s;
 }
 
 .background-footer {
@@ -666,6 +899,13 @@ h1 {
 
 .section-right-footer a {
     color: var(--cinza-claro);
+    transition: 0.3s;
+}
+
+.section-right-footer a:hover {
+    color: var(--laranja);
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 .footer-title {
@@ -711,26 +951,337 @@ h1 {
 .section-right-footer2 a {
     color: var(--cinza-claro);
     margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.section-right-footer2 a:hover {
+    color: var(--laranja);
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 .section-right-footer3 {
     display: flex;
     flex-direction: column;
-    margin-left: 80px;
+    margin-left: 70px;
+}
+
+.section-right-footer3 a {
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-right: 170px;
+    transition: 0.3s;
+}
+
+.section-right-footer3 a:hover {
+    transition: 0.3s;
+    background-color: var(--laranja);
 }
 
 .final-footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    background-color: var(--roxo-claro);
+    margin-top: 50px;
+    
 }
 
 .final-footer p {
     color: var(--branco);
+    
 }
 
 .final-footer a {
     color: var(--laranja);
     font-weight: 500;
+    transition: 0.3s;
+}
+
+.final-footer a:hover {
+    color: var(--laranja-claro);
+    transition: 0.3s;
+    font-weight: 700;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 1350px) {
+    .container {
+        max-width: 1250px;
+        transition: 0.2s;
+    }
+    
+}
+
+@media screen and (max-width: 1300px) {
+    .container {
+        max-width: 1200px;
+        transition: 0.2s;
+    }
+    .bar-section-localidade {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 1250px) {
+    .container {
+        max-width: 1100px;
+        transition: 0.2s;
+    }
+    .text-sobre {
+        margin-left: 50px;
+        transition: 0.2s;
+    }
+    .localidade {
+        margin-right: -65px;
+    }
+    .spacing-section2 {
+        width: 100%;
+        height: 550px;
+        transition: 0.3s;
+    }
+    .section-localidade {
+        padding-right: 100px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .sobre-nos .section-sobre img {
+        max-width: 30rem;
+        min-width: 300px;
+        transition: 0.3s;
+    }
+    .img-tabelionato {
+        display: flex;
+        max-width: 530px;
+        transition: 0.3s;
+    }
+    .img-civil {
+        display: flex;
+        max-width: 530px;
+        transition: 0.3s;
+    }
+    .spacing-section2 {
+        width: 100%;
+        height: 430px;
+        transition: 0.3s;
+    }
+    .localidade iframe {
+        width: 450px;
+        height: 390px;
+        transition: 0.3s;
+    }
+    
+}
+
+@media screen and (max-width: 1150px) {
+    .container {
+        max-width: 1000px;
+        transition: 0.2s;
+    }
+    .blocks {
+        gap: 30px;
+        transition: 0.2s;
+    }
+    .img-tabelionato {
+        display: flex;
+        max-width: 500px;
+        transition: 0.3s;
+    }
+    .img-civil {
+        display: flex;
+        max-width: 500px;
+        transition: 0.3s;
+    }
+    .spacing-section2 {
+        width: 100%;
+        height: 400px;
+        transition: 0.3s;
+    }
+    .description3 {
+        width: 88%;
+        transition: 0.3s;
+    }
+    .box-contact-email {
+        width: 450px;
+        height: 460px;
+        transition: 0.3s;
+    }
+    .box-contact-email .email-top p input {
+        width: 220px;
+        height: 60px;
+        transition: 0.3s;
+    }
+    .box-contact-email .email-bottom p input {
+        width: 220px;
+        height: 60px;
+        transition: 0.3s;
+    }
+    .input-mensagem {
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 1100px) {
+    .img-tabelionato {
+        display: flex;
+        max-width: 470px;
+        transition: 0.3s;
+    }
+    .img-civil {
+        display: flex;
+        max-width: 470px;
+        transition: 0.3s;
+    }
+    .spacing-section2 {
+        width: 100%;
+        height: 370px;
+        transition: 0.3s;
+    }
+    .description3 {
+        width: 80%;
+        transition: 0.3s;
+    }
+    .localidade iframe {
+        width: 400px;
+        height: 300px;
+        transition: 0.3s;
+    }
+    .p-contact-mensagem {
+        height: 10px;
+        transition: 0.3s;
+    }
+    .input-mensagem {
+        padding-top: 28px;
+        width: 90%;
+        height: 10px;
+        transition: 0.3s;
+    }
+    .img-input-msg {
+        display: flex;
+        padding-left: 17px;
+        margin-top: -185px;
+    }
+    .input-mensagem::placeholder {
+        width: 400px;
+        height: 190px;
+        display: flex;
+        font-size: 17px;
+        transition: 0.3s;
+    }
+    .form-button-enviar {
+        margin-top: -85px;
+        transition: 0.3s;
+    }
+    .email-top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        transition: 0.3s;
+    }
+    .email-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        transition: 0.3s;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .container {
+        max-width: 950px;
+        transition: 0.2s;
+    }
+    .wrappers {
+        gap: 35px;
+    }
+    .img-tabelionato {
+        display: flex;
+        max-width: 440px;
+        transition: 0.3s;
+        
+    }
+    .img-civil {
+        display: flex;
+        max-width: 440px;
+        transition: 0.3s;
+    }
+    .box-tab {
+        display: flex;
+        flex-direction: column;
+        height: 110px;
+        transition: 0.3s;
+    }   
+    .h2-tabelionato {
+        font-size: 18px;
+        transition: 0.3s;
+    }
+    .h2-tabelionato img {
+        width: 12%;
+        transition: 0.3s;
+    }
+    .a-tabelionato {
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    .box-civil {
+        display: flex;
+        flex-direction: column;
+        height: 110px;
+        transition: 0.3s;
+    } 
+    .h2-civil {
+        font-size: 18px;
+        transition: 0.3s;
+    }
+    .h2-civil img {
+        width: 12%;
+        transition: 0.3s;
+    }
+    .a-civil {
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    .spacing-section2 {
+        width: 100%;
+        height: 320px;
+        transition: 0.3s;
+    }
+    .description3 {
+        width: 85%;
+        transition: 0.3s;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        max-width: 900px;
+        transition: 0.2s;
+    }
+    .img-tabelionato {
+        display: flex;
+        max-width: 420px;
+        transition: 0.3s;
+    }
+    .img-civil {
+        display: flex;
+        max-width: 420px;
+        transition: 0.3s;
+    }
+    .spacing-section2 {
+        width: 100%;
+        height: 290px;
+        transition: 0.3s;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    
 }
