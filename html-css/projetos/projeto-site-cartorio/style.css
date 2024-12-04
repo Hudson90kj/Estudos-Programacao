@@ -165,6 +165,9 @@ h1 {
     background-color: var(--roxo-claro);
 }
 
+
+
+
 .menu {
 
 }
@@ -186,6 +189,7 @@ h1 {
     margin-left: 10px;
     gap: 20px;
 }
+
 
 /* CSS DO MENU HAMBURGUER ( 4 BOLINHAS ) */
 
@@ -1025,6 +1029,7 @@ ul {
     font-weight: 700;
 }
 
+
 /* RESPONSIVIDADE */
 
 @media screen and (max-width: 1350px) {
@@ -1479,10 +1484,11 @@ ul {
     .background-section-localidade {
         height: 1650px;
     }
+    
     .section-duvidas {
         margin-left: -50px;
     }
-    
+
     .duvidas {
 
     }
@@ -1590,11 +1596,11 @@ ul {
         max-width: 700px;
         transition: 0.2s;
     }
-    .section-duvidas {
-        margin-left: -50px;
+    .section-localidade {
+        width: 100%;
     }
-    .section-local-e-fale {
-        margin-left: 50px;
+    .section-duvidas {
+        margin: 0px;
     }
 }
 
@@ -1607,10 +1613,7 @@ ul {
         display: flex;
     }
     .section-duvidas {
-        margin-left: -50px;
-    }
-    .section-local-e-fale {
-        margin-left: 100px;
+        margin-left: 20px;
     }
 }
 
@@ -1662,7 +1665,7 @@ ul {
         height: 1100px;
     }
     .section-duvidas {
-        margin-left: -50px;
+        margin-left: 40px;
     }
 }
 
@@ -1678,10 +1681,10 @@ ul {
         transition: 0.2s;
     }
     .section-duvidas {
-        margin-left: -50px;
+        margin-left: 90px;
     }
     .section-local-e-fale {
-        margin-left: 150px;
+        
     }
 
 }
@@ -1693,8 +1696,8 @@ ul {
         max-width: 550px;
         transition: 0.2s;
     }
-    .section-local-e-fale {
-        margin-left: 180px;
+    .section-duvidas {
+        margin-left: 140px;
     }
 }
 
@@ -1723,6 +1726,9 @@ ul {
     }
     .section-right-footer3 {
         margin-left: -50px;
+    }
+    .section-duvidas {
+        margin-left: 100px
     }
 
 }

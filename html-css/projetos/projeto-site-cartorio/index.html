@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cartório Pirapó</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/imagens/favicon-16x16.png" type="image/x-icon">
 </head>
 <body>
@@ -67,6 +67,31 @@
                     </div>
                     <div class="header-sidebar-right">
                         <div class="menu-right">
+                            
+                        <!-- Checkbox que ativa o menu -->
+                        <input type="checkbox" id="menu-toggle">
+
+                        <!-- Ícone do menu -->
+                        <label for="menu-toggle" class="menu-btn">
+                            <div class="menu-icon"></div>
+                            <div class="menu-icon"></div>
+                            <div class="menu-icon"></div>
+                        </label>
+
+                        <!-- Menu lateral -->
+                        <div class="menu">
+                            <h2>Menu</h2>
+                            <a href="#">Home</a>
+                            <a href="#">Sobre</a>
+                            <a href="#">Serviços</a>
+                            <a href="#">Contato</a>
+        
+                            <!-- Botão de fechar dentro do menu -->
+                            <button class="close-btn" onclick="fecharMenu()">Fechar</button>
+                        </div>
+                            
+                            
+                            <!-- Menu antigo
                             <div class="menu-bolinhas">
                                 <a class="a-menu" href="#menu">
                                     <span></span>
@@ -75,6 +100,7 @@
                                     <span></span>
                                 </a>
                             </div>
+                        -->
                         </div>
                     </div>
                      <!-- ∷ ☰ -->
