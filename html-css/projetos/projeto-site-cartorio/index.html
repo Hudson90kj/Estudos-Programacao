@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/imagens/favicon-16x16.png" type="image/x-icon">
 </head>
+<script>
+    // Função para desmarcar o checkbox, fechando o menu
+    function fecharMenu() {
+        document.getElementById("menu-toggle").checked = false;
+    }
+</script>
 <body>
     <header>
         <!-- Linha superior com dados da empresa -->
@@ -64,6 +70,8 @@
                         <li class="nav-item-spacing">|</a></li>      
                         <!-- separadores ┃ ou ❘ - -->
                         <li class="nav-item"><a href="#criticas">Sugestões</a></li>
+                        <li class="nav-item-spacing">|</a></li> 
+                        <li class="nav-item"><a href="#contato">Contato</a></li>
                     </div>
                     <div class="header-sidebar-right">
                         <div class="menu-right">
@@ -76,18 +84,25 @@
                             <div class="menu-icon"></div>
                             <div class="menu-icon"></div>
                             <div class="menu-icon"></div>
+                            <div class="menu-icon"></div>
                         </label>
 
                         <!-- Menu lateral -->
-                        <div class="menu">
-                            <h2>Menu</h2>
+                        <div class="menu-lateral">
+                            <div class="menu-logo-lateral">
+                                <button class="close-btn" onclick="fecharMenu()">✖</button>
+                                <h2>Menu</h2>
+                        </div>
                             <a href="#">Home</a>
-                            <a href="#">Sobre</a>
-                            <a href="#">Serviços</a>
+                            <a href="#">Sobre Nós</a>
+                            <a href="#">Registro Civil</a>
+                            <a href="#">Tabelionato de Notas</a>
+                            <a href="#">Emolumentos</a>
+                            <a href="#">Sugestões</a>
                             <a href="#">Contato</a>
         
                             <!-- Botão de fechar dentro do menu -->
-                            <button class="close-btn" onclick="fecharMenu()">Fechar</button>
+                            
                         </div>
                             
                             
