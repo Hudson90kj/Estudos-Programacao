@@ -190,6 +190,10 @@ h1 {
     gap: 20px;
 }
 
+.logo-sidebar {
+    display: none;
+}
+
 
 /* ----------------- CSS DO MENU HAMBURGUER ( 4 BOLINHAS ) ----------------- */
 
@@ -241,7 +245,7 @@ body {
     top: 0;
     right: -300px;
     width: 300px;
-    height: 100vh;
+    height: 100%;
     background-color: var(--roxo-claro);
     color: white;
     padding: 30px;
@@ -264,6 +268,7 @@ body {
     padding: 10px 0;
     font-size: 18px;
     transition: color 0.3s;
+    font-weight: 600;
 }
 
 .menu-logo-lateral {
@@ -286,9 +291,16 @@ body {
 }
 
 .menu-lateral a:hover {
-    font-weight: bold;
     color: var(--laranja);
     transition: 0.3s;
+    font-weight: 800;
+}
+
+.bar-menu {
+    width: 100%;
+    margin: 10px 0px;
+    height: 1px;
+    background-color: var(--azul-2);
 }
 
 /* Estilo do botão fechar */
@@ -395,16 +407,19 @@ ul {
     opacity: 100%;
     display: flex;
     position: absolute;
-    z-index: 1;
-    width: auto;
+    width: 100vw;
 }
 
-#img-bck-top {
+#img-back-top {
     display: flex;
     opacity: 100%;
-    width: 100%;
-    min-height: 630px;
-    max-height: 680px;
+    width: 100vw;
+    height: 680px;
+    position: relative;
+}
+
+.img-back-top-mobile {
+    display: none;
 }
 
 .text-top-cartorio {
@@ -492,8 +507,7 @@ ul {
 .wrapper-space {
     display: flex;
     width: 100%;
-    min-height: 630px;
-    max-height: 680px;
+    height: 680px;
     opacity: 100%;
     background-color: #07B650;
 }
@@ -1423,6 +1437,10 @@ ul {
         display: none;
         transition: 0.3s;
     }
+    .nav-item-spacing {
+        display: none;
+        transition: 0.3s;
+    }
     .wrappers {
         gap: 35px;
     }
@@ -1808,28 +1826,112 @@ ul {
 /*  MOBILE */
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) { 
     .container {
         max-width: 900px;
         transition: 0.2s;
     }
-    .box-footer {
+    
+    .top-line {
+        display: none;
+    }
+    .header-content {
+        height: 140px;
+        background-color: var(--roxo-claro);
+        margin-bottom: -110px;
+    }
+    .logo {
+        display: none;
+    }
+    .blocks {
+        display: none;
+    }
+    .nav-info {
+ 
+    }
+    .header-sidebar {
+        height: 150px;
+    }
+    .menu-icon {
+        cursor: pointer;
+        width: 17px;
+        height: 17px;
+        border-radius: 100px;
+        background-color: var(--roxo-claro);
+        transition: background-color 0.3s;
+    }
+    .menu-btn {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        width: 47px;
+        margin-right: 20px;
+        height: auto;
+        cursor: pointer;
+    }
+    .header-siderbar-left {
+        
+    }
+    .logo-sidebar {
+        margin-left: 20px;
+        display: flex;
+        width: 60px;
+        height: 60px;
+    }
+    .text-top-cartorio {
+        width: 100%;
+        margin-top: 100px;
+        margin-left: -30px;
+        margin-right: 0px;
         display: flex;
         flex-direction: column;
+    }
+    .title-top h1 {
+        font-size: 65px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .description {
+        margin-top: 50px;
+        font-size: 35px;
+        display: flex;
+        
+    }
+
+    .description p {
+        display: flex;
         align-items: center;
         justify-content: center;
     }
-    .section-right-footer {
-        margin-left: -90px;
+
+    .wrapper-home {
+        width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
-    .section-right-footer2 {
-        margin-left: -70px;
-    }
-    .section-right-footer3 {
-        margin-left: -50px;
-    }
-    .section-duvidas {
-        margin-left: 100px
+    .wrapper-space {
+        width: 100%;
+        height: 1290px;
     }
 
-}
+    .img-background-top {
+        justify-content: center;
+    }
+
+    #img-back-top {
+        display: none;
+        
+    }
+    #img-back-top-mobile {
+        align-items: right;
+        width: 1900px;
+        height: 1290px;
+    }
+} 
