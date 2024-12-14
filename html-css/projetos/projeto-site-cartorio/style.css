@@ -35,6 +35,7 @@ a {
     --azul-2: #1A5676;
     --laranja: #F25C05;
     --laranja-claro: #ff7b00;
+    --cinza-topo: #a7bbc5;
     --cinza-mais-clarinho: #F6F6F6;
     --cinza-clarinho: #d1d1d1;
     --cinza-subtitulo: #979797;
@@ -54,6 +55,11 @@ body {
 
 h1 {
     font-family: "Poppins", sans-serif;
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 45px;
 }
 
 /* Container centralizado */
@@ -418,7 +424,8 @@ ul {
     position: relative;
 }
 
-.img-back-top-mobile {
+
+#img-back-top-mobile {
     display: none;
 }
 
@@ -436,13 +443,17 @@ ul {
     margin-bottom: 50px;
 }
 
-.title-top h1 {
+.title-top h3 {
     margin-bottom: 5px;
 }
 
 .description {
     font-size: 18px;
     margin-bottom: 35px;
+}
+
+.p1-mobile {
+    display: none;
 }
 
 .wrapper-home {
@@ -1558,8 +1569,12 @@ ul {
     }
     .title-top h1 {
         font-size: 28px;
-
     }
+
+    .title-top h3 {
+        font-size: 28px;
+    }
+
     .description {
         font-size: 17px;
     }
@@ -1878,47 +1893,44 @@ ul {
     .logo-sidebar {
         margin-left: 20px;
         display: flex;
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
     }
     .text-top-cartorio {
         width: 100%;
-        margin-top: 100px;
-        margin-left: -30px;
+        margin-top: 130px;
+        margin-left: 0px;
         margin-right: 0px;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: -50px;
     }
     .title-top h1 {
-        font-size: 65px;
+        font-size: 75px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-    }
-    .description {
-        margin-top: 50px;
-        font-size: 35px;
-        display: flex;
+        justify-content: center;
         
     }
-
-    .description p {
+    .p1-web {
+        display: none;
+    }
+    .p1-mobile {
+        margin-left: -50px;
+        width: 650px;
+        color: var(--cinza-topo);
+        margin-top: 50px;
         display: flex;
+        font-size: 35px;
+        text-align: center;
+        line-height: 55px;
         align-items: center;
         justify-content: center;
     }
-
-    .wrapper-home {
-        width: 500px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-    .wrapper-space {
-        width: 100%;
-        height: 1290px;
+    .title-top h3 {
+        font-size: 80px;
     }
 
     .img-background-top {
@@ -1930,8 +1942,52 @@ ul {
         
     }
     #img-back-top-mobile {
+        display: flex;
         align-items: right;
         width: 1900px;
-        height: 1290px;
+        height: 1200px;
+    }
+    .wrapper-home {
+        margin-top: 80px;
+        width: 750px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    .wrapper-space {
+        width: 100%;
+        height: 1200px;
+    }
+
+    .wrapper-inicio1 {
+        width: 270px;
+        height: 85px;
+        font-size: 32px;
+    }
+    .wrapper-inicio2 {
+        width: 320px;
+        height: 90px;
+        font-size: 32px;
+        border: 6px solid var(--cinza-clarinho-borda);
+    }
+    .wrapper-inicio3 {
+        width: 450px;
+        height: 90px;
+        font-size: 32px;
+        border: 6px solid var(--cinza-clarinho-borda);
+    }
+    .section-sobre {
+        width: 100%;
+        height: auto;
+        display: flex;
+        
+    }
+    .sobre-nos .section-sobre img {
+        display: flex;
+        width: 600px;
+        height: auto;
+        transition: 0.3s;
     }
 } 
