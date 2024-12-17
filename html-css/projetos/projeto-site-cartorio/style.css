@@ -872,6 +872,10 @@ ul {
     height: 24px;
 }
 
+.iframe-mobile {
+    display: none;
+}
+
 .box-contact-email {
     width: 500px;
     height: 450px;
@@ -1169,12 +1173,12 @@ ul {
     }
     .img-tabelionato {
         display: flex;
-        max-width: 560px;
+        width: 560px;
         transition: 0.3s;
     }
     .img-civil {
         display: flex;
-        max-width: 560px;
+        width: 560px;
         transition: 0.3s;
     }
     
@@ -1187,12 +1191,12 @@ ul {
     }
     .img-tabelionato {
         display: flex;
-        max-width: 530px;
+        width: 530px;
         transition: 0.3s;
     }
     .img-civil {
         display: flex;
-        max-width: 530px;
+        width: 530px;
         transition: 0.3s;
     }
     .text-sobre {
@@ -1217,12 +1221,12 @@ ul {
 
     .img-tabelionato {
         display: flex;
-        max-width: 500px;
+        width: 500px;
         transition: 0.3s;
     }
     .img-civil {
         display: flex;
-        max-width: 500px;
+        width: 500px;
         transition: 0.3s;
     }
     .spacing-section2 {
@@ -1230,11 +1234,7 @@ ul {
         height: 430px;
         transition: 0.3s;
     }
-    .localidade iframe {
-        width: 400px;
-        height: 300px;
-        transition: 0.3s;
-    }
+
     .description3 {
         width: 60%;
         transition: 0.3s;
@@ -1256,12 +1256,12 @@ ul {
     }
     .img-tabelionato {
         display: flex;
-        max-width: 500px;
+        width: 500px;
         transition: 0.3s;
     }
     .img-civil {
         display: flex;
-        max-width: 500px;
+        width: 500px;
         transition: 0.3s;
     }
     .spacing-section2 {
@@ -1300,18 +1300,23 @@ ul {
         margin-left: -150px;
         transition: 0.3s;
     }
+    .iframe-web {
+        width: 400px;
+        height: 300px;
+        transition: 0.3s;
+    }
     
 }
 
 @media screen and (max-width: 1120px) {
     .img-tabelionato {
         display: flex;
-        max-width: 470px;
+        width: 470px;
         transition: 0.3s;
     }
     .img-civil {
         display: flex;
-        max-width: 470px;
+        width: 470px;
         transition: 0.3s;
     }
     .box-tab {
@@ -1448,12 +1453,12 @@ ul {
     }
     .img-tabelionato {
         display: flex;
-        max-width: 440px;
+        width: 440px;
         transition: 0.3s;     
     }
     .img-civil {
         display: flex;
-        max-width: 440px;
+        width: 440px;
         transition: 0.3s;
     }
     .box-tab {
@@ -1506,12 +1511,12 @@ ul {
     }
     .img-tabelionato {
         display: flex;
-        max-width: 420px;
+        width: 420px;
         transition: 0.3s;
     }
     .img-civil {
         display: flex;
-        max-width: 420px;
+        width: 420px;
         transition: 0.3s;
     }
     .spacing-section2 {
@@ -1620,7 +1625,7 @@ ul {
     .description3 {
         width: 500px;
     }
-    .localidade iframe {
+    .iframe-web {
         width: 500px;
         height: 400px;
         transition: 0.3s;
@@ -1844,7 +1849,7 @@ ul {
 
 @media screen and (max-width: 600px) { 
     .container {
-        max-width: 900px;
+        max-width: 860px;
         transition: 0.2s;
     }
     
@@ -1981,7 +1986,7 @@ ul {
     }
     .section-sobre {
         width: 100%;
-        height: auto;
+        height: 2000px;
         display: flex;
         
     }
@@ -1999,14 +2004,17 @@ ul {
         
     }
     .text-sobre .p1 {
-        font-size: 40px;
+        font-size: 45px;
+        margin-bottom: 30px;
     }
     .tittle1 {
-        font-size: 80px;
+        margin-left: -8px;
+        font-size: 85px;
+        margin-bottom: 50px;
     }
     .text-sobre .description1 {
-        width: 100%;
-        font-size: 40px;
+        width: 95%;
+        font-size: 45px;
     }
     #button-saiba {
         margin-top: 80px;
@@ -2017,15 +2025,234 @@ ul {
         border-radius: 15px;
     }
 
-
-
-
-
     .spacing-section {
-        height: 200px;
+        height: 100px;
     }
 
     .spacing-section2 {
-        height: 2500px;
+        height: 3000px;
     }
+    
+    .p2 {  
+        display: flex;
+        font-size: 45px;
+        color: var(--cinza-subtitulo);
+        margin-bottom: 50px;
+        font-weight: bold;
+    }
+
+    .tittle2 {
+        display: flex;
+        font-size: 80px;
+        margin-bottom: 90px;
+        color: var(--roxo-claro);
+    }
+
+    .wrappers {
+
+    }
+
+    .tabelionato-de-notas {
+        width: 100%;
+        height: 600px;
+    }
+
+    .registro-civil {
+        width: 100%;
+        margin-top: 300px;
+    }
+
+    .box-tab {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 350px;
+        transition: 0.3s;
+    }
+    
+    .img-tabelionato {
+        display: flex;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .h2-tabelionato {
+        height: 400px;
+        margin-left: 40px;
+        padding-left: 80px;
+        font-size: 43px;
+        transition: 0.3s;
+        gap: 30px;
+    }
+
+    .h2-tabelionato img {
+        width: 13%;
+        transition: 0.3s;
+    }
+    .a-tabelionato {
+        height: 200px;
+        font-size: 38px;
+        margin-left: 40px;
+        transition: 0.3s;
+    }
+  
+    .box-civil {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 350px;
+        transition: 0.3s;
+    }
+    
+    .img-civil {
+        display: flex;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .h2-civil {
+        height: 400px;
+        margin-left: 40px;
+        padding-left: 80px;
+        font-size: 43px;
+        transition: 0.3s;
+        gap: 40px;
+    }
+
+    .h2-civil img {
+        width: 13%;
+        transition: 0.3s;
+    }
+    .a-civil {
+        height: 200px;
+        font-size: 38px;
+        margin-left: 40px;
+        transition: 0.3s;
+    }
+
+    .background-section-localidade {
+        height: 3000px;
+        margin-top: 300px;
+    }
+    
+    .section-localidade {
+        width: 100%;
+    }
+
+    .p3 {
+        padding-top: 80px;
+        font-size: 45px;
+        color: var(--cinza-subtitulo);
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+    
+    .tittle3 {
+        width: 100%;
+        font-size: 80px;
+        font-weight: 800;
+        color: var(--roxo-claro);
+        margin-bottom: 50px;
+    }
+    
+    .description3 {
+        width: 800px;
+        margin-bottom: 40px;
+        font-size: 45px;
+    }
+
+    .contact-box {
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        font-size: 45px;
+        height: auto;
+        margin-bottom: 40px;
+        transition: 0.3s;
+    }
+
+    .icone-whatsapp {
+        width: 64px;
+        height: 64px;
+    }
+
+    .icone-telefone {
+        width: 64px;
+        height: 64px;
+    }
+
+    .icone-email {
+        width: 64px;
+        height: 64px;
+    }
+
+    .iframe-web {
+        display: none;
+    }
+
+    .iframe-mobile {
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        height: 300px;
+        border: 0 none;
+        zoom: 280%;
+    }
+
+    .box-contact-email {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 1500px;
+        transition: 0.3s;
+        transition: 0.3s;
+    }
+    
+    .email-top {
+        display: flex;
+        align-items: none;
+        justify-content: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .email-bottom {
+        display: flex;
+        align-items: none;
+        justify-content: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .input-desc {
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 } 
