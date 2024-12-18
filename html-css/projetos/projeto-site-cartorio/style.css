@@ -883,6 +883,18 @@ ul {
     transition: 0.3s;
 }
 
+.img-input-mobile {
+    display: none;
+}
+
+.img-input-mensagem-mobile {
+    display: none;
+}
+
+.img-input-mobile1 {
+    display: none;
+}
+
 .input-desc {
     display: flex;
     padding-left: 50px;
@@ -966,6 +978,9 @@ ul {
     width: 500px;
     height: 230px;
     transition: 0.3s;
+}
+.input-mensagem-mobile {
+    display: none;
 }
 
 .form-button-input {
@@ -2211,10 +2226,16 @@ ul {
     
     .email-top {
         display: flex;
-        align-items: none;
-        justify-content: none;
         flex-direction: column;
         width: 100%;
+        margin-bottom: 2px;
+    }
+
+    .box-contact-email .email-top p input {
+        width: 100%;
+        height: 150px;
+        transition: 0.3s;
+        margin-bottom: 50px;
     }
 
     .email-bottom {
@@ -2225,10 +2246,56 @@ ul {
         width: 100%;
     }
 
-    .input-desc {
+    .box-contact-email .email-bottom p input {
+        width: 100%;
+        height: 150px;
+        transition: 0.3s;
+        margin-bottom: 50px;
+    }
+
+    .img-input {
+        display: none;
+    }
+
+    .img-input-msg {
+        display: none;
+    }
+
+    .email-top p {
+        margin-bottom: 140px;
+    }
+
+    .email-bottom p {
+        margin-bottom: 140px;
+    }
+
+    .img-input-mobile {
+        display: flex;
+        margin-top: -160px;
+        margin-left: 20px;
 
     }
 
+    .img-input-mensagem-mobile {
+        display: flex;
+        
+    }
+
+    .input-desc {
+        display: flex;
+        padding-top: 25px;
+    }
+
+    .input-desc::placeholder {
+        font-size: 40px;
+        padding-left: 80px;
+    
+    }
+
+    .input-mensagem {
+
+    }
+    
 
 
 
