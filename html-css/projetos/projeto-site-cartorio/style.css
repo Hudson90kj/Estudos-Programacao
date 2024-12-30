@@ -404,11 +404,10 @@ body {
 .dropdown > a:hover {
     color: var(--laranja);
     font-weight: 900;
-    transition: 0.3s;
 }
 
 .drop-menu {
-    width: 170px;
+    width: 188px;
     height: 240px;
     position: absolute;
     background-color: var(--branco-1);
@@ -425,6 +424,7 @@ body {
     align-items: center;
     color: var(--roxo-escuro);
     transition: 0.3s;
+
 }
 
 .drop-menu a:hover {
@@ -1916,7 +1916,7 @@ body {
 
 @media screen and (max-width: 600px) { 
     .container {
-        max-width: 860px;
+        max-width: 100%;
         transition: 0.2s;
     }
     
@@ -1924,9 +1924,9 @@ body {
         display: none;
     }
     .header-content {
-        height: 140px;
+        height: 0px;
         background-color: var(--roxo-claro);
-        margin-bottom: -110px;
+        margin-bottom: 0px;
     }
     .logo {
         display: none;
@@ -1938,9 +1938,14 @@ body {
  
     }
     .header-sidebar {
-        
+        position: fixed;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 18px;
         height: 150px;
+        box-shadow: 0px 0px 40px var(--cinza-subtitulo);
     }
     .menu-icon {
         cursor: pointer;
@@ -2118,16 +2123,16 @@ body {
     }
 
     .wrappers {
-
+    
     }
 
     .tabelionato-de-notas {
-        width: 100%;
+        width: 95%;
         height: 600px;
     }
 
     .registro-civil {
-        width: 100%;
+        width: 95%;
         margin-top: 300px;
     }
 
@@ -2205,7 +2210,12 @@ body {
     }
     
     .section-localidade {
+        margin-left: 50px;
         width: 100%;
+    }
+
+    .section-duvidas {
+        margin-left: 50px;
     }
 
     .p3 {
@@ -2281,7 +2291,7 @@ body {
     .email-top {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 110%;
         margin-bottom: 2px;
     }
 
@@ -2297,7 +2307,7 @@ body {
         align-items: none;
         justify-content: none;
         flex-direction: column;
-        width: 100%;
+        width: 110%;
     }
 
     .box-contact-email .email-bottom p input {
@@ -2362,7 +2372,7 @@ body {
 
     .input-mensagem {
         display: flex;
-        width: 100%;
+        width: 110%;
         height: 300px;
         font-size: 40px;
         margin-top: -25px;
@@ -2399,7 +2409,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        margin-left: 180px;
         width: 100%;
         font-size: 40px;
     }
@@ -2415,10 +2425,7 @@ body {
     }
 
     .info-cartorio-footer img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
+        width: 60%;
         height: auto;
     }
 
